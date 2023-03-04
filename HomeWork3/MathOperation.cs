@@ -13,7 +13,7 @@ namespace HomeWork3
             return numArr.Take(5).Sum();
         }
 
-        public static int Multirlu(int[] numArr)
+        public static int Multiply(int[] numArr)
         {
             int[] lastFiveNum = numArr.Reverse().Take(5).ToArray();
 

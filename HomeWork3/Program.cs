@@ -63,7 +63,7 @@ namespace HomeWork3
             }
             else
             {
-                Console.WriteLine("Product of last 5 element = {0}", MathOperation.Multirlu(intArr));
+                Console.WriteLine("Product of last 5 element = {0}", MathOperation.Multiply(intArr));
             }
 
             Console.ReadLine();
