@@ -7,7 +7,11 @@ namespace HomeWork5
     {
         string language;
 
-        public string Tool { get; set; }
+        public string Tool
+        {
+            get { return language; }
+            set { language = value; }
+        }
 
         public int CompareTo(IDeveloper other)
         {
@@ -16,12 +20,12 @@ namespace HomeWork5
 
         public void Create()
         {
-            Console.WriteLine("Create Programmer class");
+            Console.WriteLine("Create Programmer class " + language);
         }
 
         public void Destroy()
         {
-            Console.WriteLine("Destroy Programmer class");
+            Console.WriteLine("Destroy Programmer class " + language);
         }
     }
 }
