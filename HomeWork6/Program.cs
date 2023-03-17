@@ -57,12 +57,7 @@ namespace HomeWork6
 
                 for (int i = 2; i < maxIndex; i++)
                 {
-                    Console.Write("Enter next range number: ");
-                    int nextNum = Convert.ToInt32(Console.ReadLine());
-                    if (nextNum > minNum && nextNum < end)
-                        minNum = ReadNumber(nextNum, end);
-                    else
-                        throw new Exception("Number is not in range");
+                    minNum = ReadNumber(minNum, end);
                 }
             }
             catch (Exception ex)
@@ -92,7 +87,22 @@ namespace HomeWork6
 
         static int ReadNumber(int start, int end)
         {
-            return start;
+            int numInRange;
+
+            Console.Write($"Enter num in range {start} - {end}: ");
+            string buff = Console.ReadLine();
+
+            bool isParse = int.TryParse(buff, out numInRange);
+
+            if (isParse)
+            {
+                if (numInRange > start && numInRange < end)
+                    return numInRange;
+                else
+                    throw new Exception("Number is not in range");
+            }
+            else
+                throw new Exception("Non-number text is read");
         }
     }
 }
