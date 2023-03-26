@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HomeWork8
 {
-    internal class Circle : Shape
+    public class Circle : Shape
     {
         const double PI = 3.14;
         public Circle(string name) : base(name)

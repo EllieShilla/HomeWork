@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HomeWork8
 {
-    internal class Square : Shape
+    public class Square : Shape
     {
         public Square(string name) : base(name)
         {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HomeWork8
 {
-    abstract class Shape : IComparable<Shape>
+    public abstract class Shape : IComparable<Shape>
     {
         private string name;
 
