@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HomeWork9
 {
-    internal class ListOfShape
+    public class ListOfShape
     {
         List<Shape> shapes;
         int countOfShape = 3;

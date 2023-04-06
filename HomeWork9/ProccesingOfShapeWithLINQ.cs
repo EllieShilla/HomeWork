@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HomeWork9
 {
-    internal class ProccesingOfShapeWithLINQ
+    public class ProccesingOfShapeWithLINQ
     {
         string filePath;
         List<Shape> shapes;
@@ -54,12 +54,12 @@ namespace HomeWork9
             }
         }
 
-        private List<Shape> GetShapesListByRange()
+        public List<Shape> GetShapesListByRange()
         {
-            return shapes.Where(shape => shape.Area() >= 10 && shape.Area() <= 100).ToList();
+            return shapes.Where(shape => shape.Area() > 10 && shape.Area() < 100).ToList();
         }
 
-        private List<Shape> GetShapesListByContainsLetter(char letter)
+        public List<Shape> GetShapesListByContainsLetter(char letter)
         {
             return shapes.Where(shape => shape.Name.Contains(letter)).ToList();
         }

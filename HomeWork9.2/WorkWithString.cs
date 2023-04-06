@@ -63,7 +63,7 @@ namespace HomeWork9._2
             string pattern = @"^\s?(var)\s?\1?$";
             Regex regex = new Regex(pattern);
 
-            var strVarArr = strArray.AsEnumerable().Where(line => regex.IsMatch(line)).ToArray();
+            var strVarArr = strArray.Where(line => regex.IsMatch(line)).ToArray();
 
             Console.WriteLine("Lines, which consist of word \"var\":");
 
