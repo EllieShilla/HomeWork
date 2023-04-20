@@ -6,13 +6,16 @@ using System.Threading.Tasks;
 
 namespace Task8
 {
-    internal class Person : IComparable<Person>
+    [Serializable]
+    public class Person : IComparable<Person>
     {
         private string name;
         public Person(string name)
         {
             this.name = name;
         }
+
+        public Person() { }
 
         public virtual string Name { get { return name; } }
 
